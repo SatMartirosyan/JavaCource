@@ -4,10 +4,10 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Arrays {
-    public static void main(String[] arg) {
-//array();
-        //  duplicateNumbers();
-        //sqrt();
+    public static void main(String[] args) {
+        array();
+        duplicateNumbers();
+        sqrt();
         sumOfElements();
     }
 
@@ -80,22 +80,21 @@ public class Arrays {
 
     }
 
-    public static void sumOfElements(){
-        int[] array=array();
-        int number =scanner();
-        int k=0;
-        for (int i = 0; i < array.length; i++){
-            for (int j = i+1; j < array.length; j++){
-                if (array[i]+array[j]==number) {
-                    while (k<1){
-                        System.out.println("the numbers which sum is equal to "+number +": ");
+    public static void sumOfElements() {
+        int[] array = array();
+        int number = scanner();
+        int k = 0;
+        for (int i = 0; i < array.length; i++) {
+            for (int j = i + 1; j < array.length; j++) {
+                if (array[i] + array[j] == number) {
+                    while (k < 1) {
+                        System.out.println("the numbers which sum is equal to " + number + ": ");
                         k++;
                     }
-                    System.out.println( array[i]+" and "+array[j]);
+                    System.out.println(array[i] + " and " + array[j]);
                 }
             }
         }
     }
-
 
 }
