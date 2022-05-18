@@ -1,6 +1,6 @@
 package com.company.dynamic_arrays;
 
-public class DynamicArray {
+public class DynamicArray implements DynamicArrayMethods{
     int size;
     int capacity;
     String[] array;
@@ -14,8 +14,13 @@ public class DynamicArray {
         this.array = new String[capacity];
     }
 
-    public Object get(int index) {
-        return array[index];
+    public String  get(int  index) {
+        for (int i = 0; i < size; i++) {
+            if (i==index) {
+                return array[i];
+            }
+        }
+        return "index is not found";
     }
 
     public void add(String data) {
