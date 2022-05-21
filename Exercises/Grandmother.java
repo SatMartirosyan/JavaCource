@@ -5,9 +5,10 @@ import java.util.Scanner;
 public class Grandmother implements Callback {
 
     public static boolean isTrue;
+    Grandchild[] grandchildren = new Grandchild[3];
 
     @Override
-    public void callBack() {
+    public void call() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter the pension date");
         int date = scanner.nextInt();
@@ -18,8 +19,8 @@ public class Grandmother implements Callback {
 
     }
 
-    Grandmother() {
-        callBack();
+    Grandmother(Grandchild[] grandchildren) {
+        call();
     }
 
 }

@@ -2,7 +2,10 @@ package com.company.Exercises;
 
 public class Main {
     public static void main(String[] args) {
-      Grandmother grandmother=new Grandmother();
-      Grandchild grandchild=new Grandchild();
+        Grandchild[] grandchildren = new Grandchild[3];
+
+        Grandmother grandmother = new Grandmother(grandchildren);
+
+        Grandchild grandchild = new Grandchild();
     }
 }
