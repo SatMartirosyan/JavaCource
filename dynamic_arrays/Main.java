@@ -43,8 +43,8 @@ public class Main {
         System.out.println("----------------------------------------");
         System.out.println("the data of inputted index is :" + linkedList.get(1));
 
-        linkedList.addFirst("36");
-        linkedList.print();
+//        linkedList.addFirst("36");
+//        linkedList.print();
 
 
     }

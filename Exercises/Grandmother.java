@@ -1,26 +1,35 @@
 package com.company.Exercises;
 
-import java.util.Scanner;
+public class Grandmother extends Human implements OnPensionListener {
+    private double money = 0;
 
-public class Grandmother implements Callback {
+    public void setMoney(double money) {
+        this.money = money;
+    }
 
-    public static boolean isTrue;
-    Grandchild[] grandchildren = new Grandchild[3];
+    public double getMoney() {
+        return money;
+    }
 
     @Override
-    public void call() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Please enter the pension date");
-        int date = scanner.nextInt();
-        if (date > 0 && date <= 31) {
-            isTrue = true;
-            System.out.println("I've get my pension");
-        } else System.out.println("Sorry, invalid date, you can not get your pension");
-
+    public OnPensionListener onPensionReceived(double pensionAmount) {
+        money += pensionAmount;
+        System.out.println(money);
+        return null;
     }
 
-    Grandmother(Grandchild[] grandchildren) {
-        call();
+    public double moneyForGrandchild(double grandchildPart){
+        if (money>0 && money>grandchildPart){
+            money-=grandchildPart;
+            System.out.println(money);
+            return grandchildPart;
+        }
+        else {
+            System.out.println("I do not have enough money");
+            return 0;
+        }
     }
 
+    public void moneyForGrandchild() {
+    }
 }
