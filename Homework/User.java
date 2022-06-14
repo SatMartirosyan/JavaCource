@@ -1,5 +1,6 @@
 package com.company.Homework;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 public class User extends Human implements OnNewPostListener{
@@ -21,4 +22,5 @@ public class User extends Human implements OnNewPostListener{
             sb.append(chars.charAt(rnd.nextInt(chars.length())));
         return sb.toString();
     }
+
 }
