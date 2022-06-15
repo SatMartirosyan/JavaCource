@@ -6,37 +6,35 @@ import java.util.Random;
 
 public class Human {
 
-    //public ArrayList<Human> humans=new ArrayList<>();
-    // public ArrayList<User> users1 = new ArrayList<>();
 
     public ArrayList<Workers> workers = new ArrayList<>();
     boolean isWorker = new Random().nextBoolean();
     boolean isUser = new Random().nextBoolean();
     int age = new Random().nextInt(18, 80);
-    String name = "kdnem";
+    String name;
+    public static String generateRandomName(int len) {
+        String chars = "asdfghjklqwertyuiopzxcvbnm";
+        Random rnd = new Random();
+        StringBuilder sb = new StringBuilder(len);
+        for (int i = 0; i < len; i++)
+            sb.append(chars.charAt(rnd.nextInt(chars.length())));
+        return sb.toString();
+    }
 
-    //    public ArrayList<Human> humans(String name, int age) {
-//        ArrayList<Human> humans = new ArrayList<>();
-//        for (int i = 0; i < 10; i++) {
-//            humans.add(new Human());
-//            System.out.println(humans.get(i).age);
-//        }
-//        return humans;
-//    }
-    ArrayList<Human> humans = new ArrayList<User>();
-    ArrayList<User> users = new ArrayList<>();
+    ArrayList<Human> humans = new ArrayList<>();
+    ArrayList<Human> users = new ArrayList<>();
 
     public ArrayList<Human> users(String name, int age, boolean isUser) {
+        User us = new User(name, age);
         for (int i = 0; i < 10; i++) {
             humans.add(new Human());
             // System.out.println(humans.get(i).age);
         }
         for (int i = 0; i < humans.size(); i++) {
             if (humans.get(i).isUser) {
-                users.add(humans.get(i));
+                users.add(us);
             }
         }
         return users;
     }
-
 }
