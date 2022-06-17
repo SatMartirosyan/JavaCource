@@ -5,8 +5,6 @@ import java.util.Collection;
 import java.util.Random;
 
 public class Human {
-
-
     public ArrayList<Workers> workers = new ArrayList<>();
     boolean isWorker = new Random().nextBoolean();
     boolean isUser = new Random().nextBoolean();
@@ -21,20 +19,19 @@ public class Human {
         return sb.toString();
     }
 
-    ArrayList<Human> humans = new ArrayList<>();
-    ArrayList<Human> users = new ArrayList<>();
+//    ArrayList<Human> humans = new ArrayList<>();
 
-    public ArrayList<Human> users(String name, int age, boolean isUser) {
-        User us = new User(name, age);
-        for (int i = 0; i < 10; i++) {
-            humans.add(new Human());
-            // System.out.println(humans.get(i).age);
-        }
-        for (int i = 0; i < humans.size(); i++) {
-            if (humans.get(i).isUser) {
-                users.add(us);
-            }
-        }
-        return users;
-    }
+//    public ArrayList<Human> users(String name, int age, boolean isUser) {
+//        User us = new User(name, age);
+//        for (int i = 0; i < 10; i++) {
+//            humans.add(new Human());
+//            // System.out.println(humans.get(i).age);
+//        }
+//        for (int i = 0; i < humans.size(); i++) {
+//            if (humans.get(i).isUser) {
+//                users.add(us);
+//            }
+//        }
+//        return users;
+//    }
 }
